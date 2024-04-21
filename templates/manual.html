@@ -1,0 +1,56 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{lang.manual.title}}
+{% endblock %}
+
+{% block main %}
+    <img src="static\assets\metaimage.png" alt="Banner">
+    <article>
+        <h4>Video Demo:</h4>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/5dXbSk2wJAI?si=-BkqzP58ElgI9ZEC"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        <h4>Description:</h4>
+        <p>
+            An app to celebrate almost anything,
+            right now it has best support for birthday celebrations,
+            but you can customize it a lot.
+        </p>
+    
+        <ol>
+            <li>Create a celebration envelope using the template.</li>
+            <li>
+                Fill out the form taking into acount:
+                <ul>
+                    <li><b>Greeting:</b> The text before the name, <u><b><em>Happy birthday</em></b></u> Carl!</li>
+                    <li><b>Name of Receiver:</b> The name of the person, Happy birthday <u><b><em>Carl</em></b></u>!</li>
+                    <li><b>Message:</b> The message.</li>
+                    <li><b>Conffeti:</b> The small icons that fall, you can change their color, shape and falling style.</li>
+                    <li><b>Song:</b> Use a song from the presets or use a download link for any.</li>
+                </ul>
+            </li>
+            <li>Create it and share* the link of make a QR Code.</li>
+        </ol>
+        <p>
+    
+            The app isnt online so it cant be accesed from other devices that isnt the one hosting,
+            in the future I plan to make it online but I cant right now.
+        </p>
+    </article>
+
+<style>
+    #main {
+        padding-block: 0!important;
+        padding-inline: 0!important;
+    }
+    article {
+        padding: 3rem;
+        padding-bottom: 0!important;
+    }
+    img {
+        width: 100%;
+    }
+</style>
+{% endblock %}

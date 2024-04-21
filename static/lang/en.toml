@@ -1,0 +1,102 @@
+# English config file
+
+[link]
+copyMsg = "URL copied successfully!"
+
+[link.here]
+start = "Here"
+middle = "here"
+end = "here."
+
+[link.go]
+start = "Go"
+middle = "go"
+end = "go."
+
+
+
+[view]
+exclamationBefore = ""
+exclamationAfter = "!"
+title = "For"
+
+
+
+[song]
+title = "Songs"
+
+
+
+[qr]
+title = "QR Code"
+
+
+
+[index]
+title = "Create"
+legend = "Create your own celebration envelope!"
+visitToast = "Newcomer? Check the help manual"
+
+[index.greeting]
+label = "Greeting 👋"
+placeholder = "Enter greeting"
+content = "Happy birthday"
+help = "May be 25 characters long and contain latin and numeric characters, underscores and spaces"
+
+[index.name]
+label = "Name of receiver 🧑"
+placeholder = "Enter name"
+help = "May be 50 characters long and contain latin and numeric characters, underscores and spaces"
+
+[index.message]
+label = "Message 💌"
+placeholder = "Enter message"
+content = "I wish you a happy birthday and I wish you many more years of life"
+help = "May be 250 characters long and contain latin and numeric characters, underscores and whitespace"
+
+[index.songURL]
+label = "Song 🎧🎶"
+placeholder = "Enter URL"
+help = [
+    "The file has to be mpeg (mp3, m4a, acc, mpga).",
+    "The URL has to be a download link. Learn how to generate download links",
+    "You can also find pre-made links",
+]
+
+[index.confConfig]
+help = "Decorate the envelope with confetti, change the style, colors and type"
+
+[index.confConfig.style]
+label = "Confetti style 🎉"
+options = ["None", "Rain", "Showers 📵", "Jump", "Poppers 📵", "Float (Soon)"]
+optGroups = ["Fall", "Rise", "Other"]
+
+[index.confConfig.type]
+label = "Confetti type 🎊"
+options = [
+    "Confetti",
+    "Graduation cap",
+    "Gift",
+    "Heart",
+    "Christmas ornament",
+    "Jack-o'-lantern",
+]
+optGroups = ["Regular", "Holiday"]
+
+[index.confConfig.color]
+remove = "Remove Color"
+
+[index.submit]
+create = "Create"
+generateQR = "Generate QR"
+
+[index.qr]
+title = "QR"
+send = "Share this QR code as a gift!"
+
+[index.song]
+title = "Songs"
+
+
+[manual]
+title = "Manual"

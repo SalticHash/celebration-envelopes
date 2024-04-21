@@ -1,0 +1,109 @@
+# Spanish config file
+
+[link]
+copyMsg = "¡URL copiada correctamente!"
+
+[link.here]
+start = "Aquí"
+middle = "aquí"
+end = "aquí."
+
+[link.go]
+start = "Ir"
+middle = "ir"
+end = "ir."
+
+
+
+[view]
+exclamationBefore = "¡"
+exclamationAfter = "!"
+title = "Para"
+
+
+
+[song]
+title = "Canciones"
+
+
+
+[qr]
+title = "Codigo QR"
+
+
+
+[index]
+title = "Crear"
+legend = "¡Crea tu propio sobre de celebración!"
+visitToast = "Eres nuevo? Revisa el manual de uso"
+
+[index.greeting]
+label = "Felicitación 👋"
+placeholder = "Ingresar felicitación"
+content = "Feliz cumpleaños"
+help = "Puede tener 25 caracteres y contener caracteres latinos y numéricos, guiones bajos y espacios"
+
+[index.name]
+label = "Nombre del receptor 🧑"
+placeholder = "Ingresar nombre"
+help = "Puede tener 50 caracteres y contener caracteres latinos y numéricos, guiones bajos y espacios"
+
+[index.message]
+label = "Mensaje 💌"
+placeholder = "Ingresar mensaje"
+content = "Te deseo un feliz cumpleaños y te deseo muchos años más de vida"
+help = "Puede tener 250 caracteres y contener caracteres latinos y numéricos, guiones bajos y espacios"
+
+[index.songURL]
+label = "Canción 🎧🎶"
+placeholder = "Ingresar URL"
+help = [
+    "El archivo tiene que ser mpeg (mp3, m4a, acc, mpga).",
+    "La URL tiene que ser un enlace de descarga. Más información sobre cómo generar enlaces de descarga",
+    "También puedes encontrar enlaces prehechos",
+]
+
+[index.confConfig]
+help = "Decora la página con confeti, cambia el estilo, colores y tipo"
+
+[index.confConfig.style]
+label = "Estilo de confeti 🎉"
+options = [
+    "Ninguno",
+    "Lluvia",
+    "Duchas 📵",
+    "Salto",
+    "Poppers 📵",
+    "Flote (Próximamente)",
+]
+optGroups = ["Bajan", "Suben", "Otros"]
+
+[index.confConfig.type]
+label = "Tipo de confeti 🎊"
+options = [
+    "Confeti",
+    "Birrete de graduación",
+    "Regalo",
+    "Corazón",
+    "Adorno navideño",
+    "Calabaza de Halloween",
+]
+optGroups = ["Regular", "Festivo"]
+
+[index.confConfig.color]
+remove = "Quitar Color"
+
+[index.submit]
+create = "Crear"
+generateQR = "Generar QR"
+
+[index.qr]
+title = "QR"
+send = "¡Comparte este Codigo QR como regalo!"
+
+[index.song]
+title = "Canciónes"
+
+
+[manual]
+title = "Manual"

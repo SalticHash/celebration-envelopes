@@ -1,0 +1,8 @@
+# for app.py, lang.py and qrimg.py
+Flask
+
+# for lang.py and config.py
+tomli
+
+# for qrimg.py
+qrcode

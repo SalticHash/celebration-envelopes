@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{lang.view.title}} {{ req.name }}
+{% endblock %}
+
+{% block main %}
+    <div class="card container mb-3 flex-center" style="height: 60vh">
+        <h5 class="card-title">
+            {{lang.view.exclamationBefore}}{{ req.greeting }} {{ req.name }}{{lang.view.exclamationAfter}}
+        </h5>
+        <p class="card-text">{{ req.message }}</p>
+    </div>
+
+    {% if req.songURL %}
+        <audio id="song" preload>
+            <source type="audio/mpeg" src="{{req.songURL}}">
+        </audio>
+    {% endif %}
+
+    {% if req.confStyle != "0" %}
+        <canvas class="full-viewport fixed-top" data-style="{{req.confStyle}}" data-type="{{req.confType}}"
+            data-colors="{{req.confColors}}" style="pointer-events: none"></canvas>
+        <script src="/static/js/confetti.js"></script>
+    {% endif %}
+
+    <div class="full-viewport fixed-top flex-center envelope-container bg-body envelope-container" id="envelopeContainer">
+        <svg version="1.2" xmlns="http://www.w3.org/2000/svg" class="bi bi-envelope-fill envelope" id="envelope"
+            viewBox="0 0 16 12" width="16" height="12" fill="currentColor" onclick="openEnvelope()">
+            <!-- <title>Envelope</title> -->
+            <path fill-rule="evenodd" d="m0.1 1.6q0-0.4 0.2-0.7 0.2-0.3 0.5-0.5 0.2-0.2 0.5-0.3 0.4-0.1 0.7-0.1h12q0.3 0 0.7 0.1 0.3 0.1 0.5 0.3 0.3 0.2 0.5 0.5 0.2 0.3 0.3 0.7l-8 4.8zm5.8 4.7l-5.9 3.6 0.1-7.1zm2.1 1.3l1.3-0.8 6.6 4.1q-0.2 0.2-0.4 0.4-0.1 0.3-0.4 0.4-0.2 0.2-0.5 0.2-0.3 0.1-0.6 0.1h-12q-0.2 0-0.5-0.1-0.3 0-0.5-0.2-0.3-0.1-0.5-0.4-0.1-0.2-0.3-0.4l6.6-4.1c0 0 1.2 0.8 1.2 0.8zm8-4.9v7.1l-5.8-3.5c0 0 5.8-3.6 5.8-3.6z"/>
+        </svg>
+        <script src="/static/js/envelope.js"></script>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,191 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{lang.index.title}}
+{% endblock %}
+
+{% block main %}
+    <div class="card">
+        <form action="/" method="post" target="_blank" class="card-body">
+            <fieldset>
+                <legend>
+                    {{lang.index.legend}}
+                </legend>
+                <div class="mb-3">
+                    <label class="form-label" for="greeting">
+                        {{lang.index.greeting.label}}
+                    </label>
+                    <input class="form-control" autocomplete="off" required name="greeting" id="greeting"
+                        placeholder="{{lang.index.greeting.placeholder}}" maxlength="25"
+                        pattern="^[\w À-ÿ][^×÷]{1,25}$" value="{{lang.index.greeting.content}}">
+                    <div id="greetingHelp" class="form-text hide-small">
+                        {{lang.index.greeting.help}}
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="name">
+                        {{lang.index.name.label}}
+                    </label>
+                    <input class="form-control" autocomplete="off" required name="name" id="name"
+                        placeholder="{{lang.index.name.placeholder}}"
+                        autofocus maxlength="50" pattern="^[\w À-ÿ][^×÷]{1,50}$">
+                    <div id="nameHelp" class="form-text hide-small">
+                        {{lang.index.name.help}}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">
+                        {{lang.index.message.label}}
+                    </label>
+                    <textarea class="form-control" required name="message" id="message" maxlength="250"
+                        placeholder="{{lang.index.message.placeholder}}" rows="3">{{lang.index.message.content}}</textarea>
+
+                    <div id="messageHelp" class="form-text hide-small">
+                        {{lang.index.message.help}}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label for="songURL" class="form-label">
+                        {{lang.index.songURL.label}}
+                    </label>
+                    <input class="form-control" autocomplete="off" type="url" name="songURL" id="songURL"
+                        placeholder="{{lang.index.songURL.placeholder}}" pattern='^(http|https):\/\/[^ "]+$'>
+                    <div id="songURLHelp" class="form-text">
+                        {{lang.index.songURL.help[0]}}
+                        <br>
+
+                        {{lang.index.songURL.help[1]}}
+                        <a href="https://sites.google.com/site/gdocs2direct/" target="_blank">
+                            {{lang.link.here.end}}
+                        </a>
+                        <br>
+
+                        {{lang.index.songURL.help[2]}}
+                        <a href="/songs" target="_blank">
+                            {{lang.link.here.end}}
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row g-2">
+                    <div class="mb-2 col">
+                        <label for="confStyle" class="form-label">
+                            {{lang.index.confConfig.style.label}}
+                        </label>
+                        <select class="form-select" name="confStyle" id="confStyle">
+                            <option value="0" selected>
+                                {{lang.index.confConfig.style.options[0]}}
+                            </option>
+                            <optgroup label="{{lang.index.confConfig.style.optGroups[0]}}">
+                                <option value="1">
+                                    {{lang.index.confConfig.style.options[1]}}
+                                </option>
+                                <option value="2">
+                                    {{lang.index.confConfig.style.options[2]}}
+                                </option>
+                            </optgroup>
+                            <optgroup label="{{lang.index.confConfig.style.optGroups[1]}}">
+                                <option value="3">
+                                    {{lang.index.confConfig.style.options[3]}}
+                                </option>
+                                <option value="4">
+                                    {{lang.index.confConfig.style.options[4]}}
+                                </option>
+                            </optgroup>
+                            <optgroup label="{{lang.index.confConfig.style.optGroups[2]}}">
+                                <option value="5">
+                                    {{lang.index.confConfig.style.options[5]}}
+                                </option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="mb-1 col">
+                        <label for="confType" class="form-label">
+                            {{lang.index.confConfig.type.label}}
+                        </label>
+                        <select class="form-select" name="confType" id="confType">
+                            <optgroup label="{{lang.index.confConfig.type.optGroups[0]}}">
+                                <option value="0" selected>
+                                    {{lang.index.confConfig.type.options[0]}}
+                                </option>
+                                <option value="1">
+                                    {{lang.index.confConfig.type.options[1]}}
+                                </option>
+                                <option value="2">
+                                    {{lang.index.confConfig.type.options[2]}}
+                                </option>
+                            </optgroup>
+                            <optgroup label="{{lang.index.confConfig.type.optGroups[1]}}">
+                                <option value="3">
+                                    {{lang.index.confConfig.type.options[3]}}
+                                </option>
+                                <option value="4">
+                                    {{lang.index.confConfig.type.options[4]}}
+                                </option>
+                                <option value="5">
+                                    {{lang.index.confConfig.type.options[5]}}
+                                </option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <div class="d-flex align-items-center">
+                        <div id="colorPickers" class="d-flex align-items-center">
+                            {% set colors = ["#d82e3f", "#3581d8", "#ffe135", "#28cc2d"] %}
+                            {% for color in colors %}
+                            <input type="color" class="form-control form-control-color me-2"
+                                name="color" value="{{color}}" oncontextmenu="openRemoveMenu(event, this)"/>
+                            {% endfor %}
+                        </div>
+                        <button class="btn bi bi-plus px-0 py-0" id="add-color-btn" type="button"
+                            onclick="addColor()"></button>
+                    </div>
+                    <div id="ConfettiHelp" class="form-text hide-small">
+                        {{lang.index.confConfig.help}}
+                    </div>
+
+                    <ul class="dropdown-menu" id="removeColorMenu">
+                        <li><button class="dropdown-item" type="button" onclick="removeColor()">
+                            {{lang.index.confConfig.color.remove}}
+                        </button></li>
+                    </ul>
+                    <script src="/static/js/confettiColorPicker.js"></script>
+                </div>
+
+                <button class="btn btn-primary" type="submit" name="create" value="Create">
+                    {{lang.index.submit.create}}
+                </button>
+                <button class="btn btn-success" type="submit" name="generate_qr" value="GenerateQR">
+                    {{lang.index.submit.generateQR}}
+                </button>
+            </fieldset>
+        </form>
+    </div>
+
+    <div class="toast-container position-fixed top-0 start-50 translate-middle-x p-3 show" id="visitToast">
+        <div class="toast show align-items-center text-bg-success border-0 fade" role="alert">
+            <div class="d-flex">
+                <div class="toast-body">
+                    {{lang.index.visitToast}}
+                    <a href="/manual" target="_blank">
+                        {{lang.link.here.end}}
+                    </a>
+                </div>
+                <button type="button" class="btn-close me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+            </div>
+        </div>
+        <script>
+            const visitToast = document.getElementById("visitToast");
+            if (localStorage.getItem("visited")) {
+                visitToast.remove()
+            } else {
+                localStorage.setItem("visited", true);
+            }
+        </script>
+    </div>
+{% endblock %}

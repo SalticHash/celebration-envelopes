@@ -1,0 +1,49 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    {{lang.song.title}}
+{% endblock %}
+
+{% block main %}
+    <div class="text-center container mb-3">
+        <h2 class="mb-3">
+            {{lang.song.title}}
+        </h2>
+        <div class="list-group">
+            {% for song in songs %}
+                <div class="list-group-item d-flex w-100 justify-content-between align-items-center">
+                    <h5 class="mb-0">{{ song.name }}</h5>
+                    <div class="d-flex">
+                        <div id="audio-player">
+                            <audio data-paused="1">
+                                <source type="audio/mpeg" src="{{ song.url }}">
+                            </audio>
+                            <button class="btn bi bi-play-fill px-2"
+                                onclick="play(this, this.previousElementSibling)"></button>
+                        </div>
+                        <a class="btn bi bi-download px-2" href="{{ song.url }}"></a>
+                        <button class="btn bi bi-link-45deg px-2" data-url="{{ song.url }}"
+                            onclick="copy(this)"></button>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="toast-container position-fixed bottom-0 end-0 p-3">
+      <div id="copyAlert" class="toast align-items-center text-bg-success border-0 fade" role="alert">
+        <div class="toast-header">
+          <img src="/static/assets/favicon.ico" height="30" class="rounded me-2" alt="Icon">
+          <strong class="me-auto">Happy Birthday Creator</strong>
+          <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+        </div>
+        <div class="toast-body">
+            {{lang.link.copyMsg}}
+        </div>
+      </div>
+    </div>
+
+    <script src="/static/js/copy.js"></script>
+    <script src="/static/js/songs.js"></script>
+
+{% endblock %}

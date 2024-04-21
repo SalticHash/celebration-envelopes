@@ -1,0 +1,200 @@
+{
+    "en": {
+        "link": {
+            "here": {
+                "start": "Here",
+                "middle": "here",
+                "end": "here."
+            },
+            "go": {
+                "start": "Go",
+                "middle": "go",
+                "end": "go."
+            },
+            "copy": "URL copied successfully!"
+        },
+        "view": {
+            "exclamationBefore": "",
+            "exclamationAfter": "!",
+            "title": "For"
+        },
+        "index": {
+            "title": "Create",
+            "legend": "Create your own celebration envelope!",
+            "greeting": {
+                "label": "Greeting 👋",
+                "placeholder": "Enter greeting",
+                "content": "Happy birthday",
+                "help": "May be 25 characters long and contain latin and numeric characters, underscores and spaces"
+            },
+            "name": {
+                "label": "Name of receiver 🧑",
+                "placeholder": "Enter name",
+                "help": "May be 50 characters long and contain latin and numeric characters, underscores and spaces"
+            },
+            "message": {
+                "label": "Message 💌",
+                "placeholder": "Enter message",
+                "content": "I wish you a happy birthday and I wish you many more years of life",
+                "help": "May be 250 characters long and contain latin and numeric characters, underscores and whitespace"
+            },
+            "songURL": {
+                "label": "Song 🎧🎶",
+                "placeholder": "Enter URL",
+                "help": [
+                    "The file has to be mpeg (mp3, m4a, acc, mpga).",
+                    "The URL has to be a download link. Learn how to generate download links",
+                    "You can also find pre-made links"
+                ]
+            },
+            "confConfig": {
+                "style": {
+                    "label": "Confetti style 🎉",
+                    "options": [
+                        "None",
+                        "Rain",
+                        "Showers 📵",
+                        "Jump",
+                        "Poppers 📵",
+                        "Float (Soon)"
+                    ],
+                    "optGroups": [
+                        "Fall",
+                        "Rise",
+                        "Other"
+                    ]
+                },
+                "type": {
+                    "label": "Confetti type 🎊",
+                    "options": [
+                        "Confetti",
+                        "Graduation cap",
+                        "Gift",
+                        "Heart",
+                        "Christmas ornament",
+                        "Jack-o'-lantern"
+                    ],
+                    "optGroups": [
+                        "Regular",
+                        "Holiday"
+                    ]
+                },
+                "color": {
+                    "remove": "Remove Color"
+                },
+                "help": "Decorate the envelope with confetti, change the style, colors and type"
+            },
+            "submit": {
+                "create": "Create",
+                "generateQR": "Generate QR"
+            },
+            "qr": {
+                "title": "QR",
+                "send": "Share this QR code as a gift!"
+            },
+            "visitToast": "Newcomer? Check the help manual",
+            "song": {
+                "title": "Songs"
+            }
+        }
+    },
+    "es": {
+        "link": {
+            "here": {
+                "start": "Aquí",
+                "middle": "aquí",
+                "end": "aquí."
+            },
+            "go": {
+                "start": "Ir",
+                "middle": "ir",
+                "end": "ir."
+            },
+            "copy": "¡URL copiada correctamente!"
+        },
+        "view": {
+            "exclamationBefore": "¡",
+            "exclamationAfter": "!",
+            "title": "Para"
+        },
+        "index": {
+            "title": "Crear",
+            "legend": "¡Crea tu propio sobre de celebración!",
+            "greeting": {
+                "label": "Felicitación 👋",
+                "placeholder": "Ingresar felicitación",
+                "content": "Feliz cumpleaños",
+                "help": "Puede tener 25 caracteres y contener caracteres latinos y numéricos, guiones bajos y espacios"
+            },
+            "name": {
+                "label": "Nombre del receptor 🧑",
+                "placeholder": "Ingresar nombre",
+                "help": "Puede tener 50 caracteres y contener caracteres latinos y numéricos, guiones bajos y espacios"
+            },
+            "message": {
+                "label": "Mensaje 💌",
+                "placeholder": "Ingresar mensaje",
+                "content": "Te deseo un feliz cumpleaños y te deseo muchos años más de vida",
+                "help": "Puede tener 250 caracteres y contener caracteres latinos y numéricos, guiones bajos y espacios"
+            },
+            "songURL": {
+                "label": "Canción 🎧🎶",
+                "placeholder": "Ingresar URL",
+                "help": [
+                    "El archivo tiene que ser mpeg (mp3, m4a, acc, mpga).",
+                    "La URL tiene que ser un enlace de descarga. Más información sobre cómo generar enlaces de descarga",
+                    "También puedes encontrar enlaces prehechos"
+                ]
+            },
+            "confConfig": {
+                "style": {
+                    "label": "Estilo de confeti 🎉",
+                    "options": [
+                        "Ninguno",
+                        "Lluvia",
+                        "Duchas 📵",
+                        "Salto",
+                        "Poppers 📵",
+                        "Flote (Próximamente)"
+                    ],
+                    "optGroups": [
+                        "Bajan",
+                        "Suben",
+                        "Otros"
+                    ]
+                },
+                "type": {
+                    "label": "Tipo de confeti 🎊",
+                    "options": [
+                        "Confeti",
+                        "Birrete de graduación",
+                        "Regalo",
+                        "Corazón",
+                        "Adorno navideño",
+                        "Calabaza de Halloween"
+                    ],
+                    "optGroups": [
+                        "Regular",
+                        "Festivo"
+                    ]
+                },
+                "color": {
+                    "remove": "Quitar Color"
+                },
+                "help": "Decora la página con confeti, cambia el estilo, colores y tipo"
+            },
+            "submit": {
+                "create": "Crear",
+                "generateQR": "Generar QR"
+            },
+            "qr": {
+                "title": "QR",
+                "send":"¡Comparte este Codigo QR como regalo!"
+            },
+            "visitToast": "Eres nuevo? Revisa el manual de uso",
+            "song": {
+                "title": "Canciónes"
+            }
+        }
+    }
+}
