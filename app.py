@@ -117,3 +117,7 @@ def generateQR_Route():
 def error(text, statuscode = 400):
     req = {"text": text, "statuscode": statuscode}
     return render_template("error.html", req=req)
+
+
+if __name__ == "__main__":
+    app.run(debug = True,port=2727)
