@@ -105,7 +105,7 @@ def page_not_found(_event):
 @app.route('/QRUrl')
 def generateQRUrl():
     data = request.args.get("q")
-    url = f"https://www.hbd-creator/view?q={data}"
+    url = f"https://celebration-envelopes.vercel.app/view?q={data}"
     return generate_qr_image(url)
 
 # Get q and pass it to img to get the qr
