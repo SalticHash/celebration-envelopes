@@ -1,7 +1,7 @@
 # builtin
 from os import listdir
 
-from toml import loads as load_toml
+from tomli import load as load_toml
 from flask import request
 
 class LanguageDict:
