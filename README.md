@@ -7,9 +7,7 @@ right now it has best support for birthday celebrations, but you can customize i
 
 This is the perfect app if you want to congratulate someone, you can change the greeting,
 name, message, song and confetti, the confetti is one of the most customizable parts of the app,
-you can change the confetti shape, color and fall style,
-I wish this app can be used by everyone when it is finaly released,
-after CS50 I will continue to work on it and maybe release it on the domain of *celebrationenvelopes.com*.
+you can change the confetti shape, color and fall style.
 
 1. Create a celebration envelope using the template.
 2. Fill out the form.
@@ -17,7 +15,7 @@ after CS50 I will continue to work on it and maybe release it on the domain of *
         The text before the name, ***Happy birthday*** Carl!
         May be 25 characters long and contain latin and numeric characters, underscores and spaces.
 
-    * **Name of Receiver:***
+    * **Name of Receiver:**
         The name of the person, Happy birthday ***Carl***!
         May be 50 characters long and contain latin and numeric characters, underscores and spaces.
 
@@ -33,9 +31,9 @@ after CS50 I will continue to work on it and maybe release it on the domain of *
 
     * **Song:**
         Use a song from the presets or use a download link for any.
-        The premade song links are Happy Birthday, Happy Birthday (Version Reggaeton), Thalía - Quinceañera, Vicente Fernandez - Las Mañanitas, Ismael Gallegos - En Tu Día.
+        The premade song links are `Happy Birthday`, `Happy Birthday (Version Reggaeton)`, `Thalía - Quinceañera`, `Vicente Fernandez - Las Mañanitas`, `Ismael Gallegos - En Tu Día`.
         The file has to be mpeg (mp3, m4a, acc, mpga).
         You can also use custom songs and audios the url has to be a donload link for the media though, the easiest way to make one is to record some audio or download a song in the supported formats then upload it to drive and use the tool linked on the song section to transform the drive share url into a download link.
 
-3. Create it and share* the link or make a QR Code.
+3. Create it and share the link or make a QR Code.
 4. Congratulate your friends, family or anybody you want!
