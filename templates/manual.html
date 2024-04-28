@@ -5,52 +5,117 @@
 {% endblock %}
 
 {% block main %}
-    <img src="static\assets\metaimage.png" alt="Banner">
     <article>
+        <h1 id="celebration-envelopes-">Celebration Envelopes!</h1>
+        <img src="static/assets/metaimage.png" alt="Banner" id="banner">
+
         <h4>Video Demo:</h4>
         <iframe width="560" height="315" src="https://www.youtube.com/embed/5dXbSk2wJAI?si=-BkqzP58ElgI9ZEC"
             title="YouTube video player" frameborder="0"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
+        
         <h4>Description:</h4>
+        <p>An app to celebrate almost anything, right now it has best support for birthday celebrations, but you can customize it a lot.</p>
         <p>
-            An app to celebrate almost anything,
-            right now it has best support for birthday celebrations,
-            but you can customize it a lot.
+            This is the perfect app if you want to congratulate someone, you can change the greeting,
+            name, message, song and confetti, the confetti is one of the most customizable parts of the app,
+            you can change the confetti shape, color and fall style.
         </p>
     
         <ol>
             <li>Create a celebration envelope using the template.</li>
             <li>
-                Fill out the form taking into acount:
+                Fill out the form.
                 <ul>
-                    <li><b>Greeting:</b> The text before the name, <u><b><em>Happy birthday</em></b></u> Carl!</li>
-                    <li><b>Name of Receiver:</b> The name of the person, Happy birthday <u><b><em>Carl</em></b></u>!</li>
-                    <li><b>Message:</b> The message.</li>
-                    <li><b>Conffeti:</b> The small icons that fall, you can change their color, shape and falling style.</li>
-                    <li><b>Song:</b> Use a song from the presets or use a download link for any.</li>
+                    <li>
+                        <strong>Greeting:</strong>
+                        The text before the name, <span id="h">Happy birthday</span> Carl!
+                        May be 25 characters long and contain latin and numeric characters, underscores and spaces.
+                    </li>
+                    <li>
+                        <strong>Name of Receiver:</strong>
+                        The name of the person, Happy birthday <span id="h">Carl</span>!
+                        May be 50 characters long and contain latin and numeric characters, underscores and spaces.
+                    </li>
+                    <li>
+                        <strong>Message:</strong>
+                        The message you want the person that receives the envelope to read, it&#39;s normaly a paragraph or longer.
+                        May be 250 characters long and contain latin and numeric characters, underscores and whitespace.
+                    </li>
+                    <li>
+                        <strong>Conffeti:</strong>
+                        The small icons that fall, you can change their color, shape and falling style.
+                        You can have from one to six colors.
+                        The shapes available are Confetti, Graduation cap, Gift, Heart, Christmas ornament,
+                        Jack-o&#39;-lantern.
+                        The fall styles available are Rain, Showers, Jump, Poppers or you can choose to disable confetti
+                        with None.
+                    </li>
+                    <li>
+                        <strong>Song:</strong>
+                        Use a song from the presets or use a download link for any.
+                        The premade song links are
+                        <span id="h">Happy Birthday</span>,
+                        <span id="h">Happy Birthday (Version Reggaeton)</span>,
+                        <span id="h">Thalía - Quinceañera</span>,
+                        <span id="h">Vicente Fernandez - Las Mañanitas</span>,
+                        <span id="h">Ismael Gallegos - En Tu Día</span>.
+                        The file has to be mpeg (mp3, m4a, acc, mpga).
+                        You can also use custom songs and audios the url has to be a donload link for the media though,
+                        the easiest way to make one is to record some audio or download a song in the supported formats
+                        then upload it to drive and use the tool linked on the song section to transform the drive share
+                        url into a download link.
+                    </li>
                 </ul>
             </li>
-            <li>Create it and share* the link of make a QR Code.</li>
+            <li>
+                <p>Create it and share the link or make a QR span.</p>
+            </li>
+            <li>Congratulate your friends, family or anybody you want!</li>
         </ol>
-        <p>
-    
-            The app isnt online so it cant be accesed from other devices that isnt the one hosting,
-            in the future I plan to make it online but I cant right now.
-        </p>
+
     </article>
 
-<style>
-    #main {
-        padding-block: 0!important;
-        padding-inline: 0!important;
-    }
-    article {
-        padding: 3rem;
-        padding-bottom: 0!important;
-    }
-    img {
-        width: 100%;
-    }
-</style>
+    <style>
+        article {
+            padding-inline: 3rem;
+        }
+
+        #banner {
+            width: 100%;
+        }
+
+        span {
+            font-family: monospace;
+            font-size: 14px;
+            color: var(--bs-code-color);
+            background-color: #381325;
+            border-radius: 6px;
+            padding: 2px;
+        }
+    </style>
+
+    {% if lang.user == "es" %}
+        <div class="toast-container position-fixed bottom-0 end-0 p-3">
+            <div id="languageAlert" class="toast align-items-center text-bg-success border-0 fade" role="alert">
+                <div class="toast-header">
+                    <img src="/static/assets/favicon.ico" height="30" class="rounded me-2" alt="Icon">
+                    <strong class="me-auto">Celebration Envelopes</strong>
+                    <button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                    No hay traducción al español disponible. Usa el traductor de tu buscador.
+                </div>
+            </div>
+        </div>
+        <script>
+            const alertBootstrapElement = document.getElementById("languageAlert");
+            const alertBootstrap = new bootstrap.Toast(alertBootstrapElement);
+
+            if (alertBootstrap) {
+                alertBootstrap.show();
+            }
+        </script>
+    {% endif %}
 {% endblock %}

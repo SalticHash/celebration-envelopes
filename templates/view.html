@@ -13,7 +13,7 @@
     </div>
 
     {% if req.songURL %}
-        <audio id="song" preload>
+        <audio preload="auto" id="song" preload>
             <source type="audio/mpeg" src="{{req.songURL}}">
         </audio>
     {% endif %}
