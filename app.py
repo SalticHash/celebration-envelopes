@@ -123,4 +123,4 @@ def error(text, statuscode = 400):
     return render_template("error.html", req=req)
 
 if __name__ == "__main__":
-    app.run(debug = True, port=2727)
+    app.run(port=2727)
