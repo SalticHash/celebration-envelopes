@@ -74,7 +74,7 @@
                         <label for="confStyle" class="form-label">
                             {{lang.index.confConfig.style.label}}
                         </label>
-                        <select class="form-select" name="confStyle" id="confStyle">
+                        <select onchange="disableStyle()" class="form-select" name="confStyle" id="confStyle">
                             <option value="0" selected>
                                 {{lang.index.confConfig.style.options[0]}}
                             </option>
@@ -106,7 +106,7 @@
                         <label for="confType" class="form-label">
                             {{lang.index.confConfig.type.label}}
                         </label>
-                        <select class="form-select" name="confType" id="confType">
+                        <select disabled onchange="disableStyle()" class="form-select" name="confType" id="confType">
                             <optgroup label="{{lang.index.confConfig.type.optGroups[0]}}">
                                 <option value="0" selected>
                                     {{lang.index.confConfig.type.options[0]}}
@@ -129,8 +129,14 @@
                                     {{lang.index.confConfig.type.options[5]}}
                                 </option>
                             </optgroup>
+                            <optgroup label="{{lang.index.confConfig.type.optGroups[2]}}">
+                                <option value="6">
+                                    {{lang.index.confConfig.type.options[6]}}
+                                </option>
+                            </optgroup>
                         </select>
                     </div>
+                    <script src="/static/js/disableStyle.js"></script>
                 </div>
 
                 <div class="mb-3">

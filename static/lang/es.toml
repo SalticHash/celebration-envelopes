@@ -81,14 +81,15 @@ optGroups = ["Bajan", "Suben", "Otros"]
 [index.confConfig.type]
 label = "Tipo de confeti 🎊"
 options = [
-    "Confeti",
-    "Birrete de graduación",
-    "Regalo",
-    "Corazón",
-    "Adorno navideño",
-    "Calabaza de Halloween",
+    "Confeti 🎉",
+    "Birrete de graduación 🎓",
+    "Regalo 🎁",
+    "Corazón ❤️",
+    "Adorno navideño ❄️",
+    "Calabaza de Halloween 🎃",
+    "Vacafeti 🐮"
 ]
-optGroups = ["Regular", "Festivo"]
+optGroups = ["Regular", "Festivo", "???"]
 
 [index.confConfig.color]
 remove = "Quitar Color"

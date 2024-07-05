@@ -19,7 +19,8 @@ const assets = [
     {filename: "gift.svg", w: 28, h: 28},
     {filename: "heart.svg", w: 28, h: 28},
     {filename: "ornament.svg", w: 42, h: 42},
-    {filename: "jack.svg", w: 42, h: 42}
+    {filename: "jack.svg", w: 42, h: 42},
+    {filename: "cowfetti.svg", w: 42, h: 42}
 ]
 const asset = assets[Number(canvas.dataset.type)];
 let colors = canvas.dataset.colors;

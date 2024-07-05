@@ -74,14 +74,15 @@ optGroups = ["Fall", "Rise", "Other"]
 [index.confConfig.type]
 label = "Confetti type 🎊"
 options = [
-    "Confetti",
-    "Graduation cap",
-    "Gift",
-    "Heart",
-    "Christmas ornament",
-    "Jack-o'-lantern",
+    "Confetti 🎉",
+    "Graduation cap 🎓",
+    "Gift 🎁",
+    "Heart ❤️",
+    "Christmas ornament ❄️",
+    "Jack-o'-lantern 🎃",
+    "Cowfetti 🐮"
 ]
-optGroups = ["Regular", "Holiday"]
+optGroups = ["Regular", "Holiday", "???"]
 
 [index.confConfig.color]
 remove = "Remove Color"

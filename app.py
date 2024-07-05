@@ -51,11 +51,14 @@ def index():
             return error("Confetti style unavailable")
 
         # Test for number
-        if not match(r'^\d+$', confType):
-            return error("Confetti type is not a number")
-        # Test if bigger than 5
-        if int(confType) > 5:
-            return error("Confetti type unavailable")
+        if int(confStyle) != 0:
+            if not match(r'^\d+$', confType):
+                return error("Confetti type is not a number")
+            # Test if bigger than 6
+            if int(confType) > 6:
+                return error("Confetti type unavailable")
+        else:
+            confType = '0'
 
         # Test all colors
         for color in confColors:
