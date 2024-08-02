@@ -28,6 +28,9 @@ class LanguageDict:
         best_match = languages.best_match(self.langs)
         if key == "user":
             return best_match
+        
+        if best_match == None:
+            best_match = "en"
 
         userLang = self.data.get(best_match)
         return userLang.get(key)
