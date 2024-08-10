@@ -42,6 +42,12 @@ def index():
         # Test for URLs.
         if not match(r'^(http|https):\/\/[^ "]+$', songURL) and songURL:
             return error("Invalid url format")
+        
+        # If using sndup and forgot /d or d add it.
+        if match(r'https?:\/\/sndup.net\/\w+\/', songURL):
+            songURL += "d"
+        elif match(r'https?:\/\/sndup.net\/\w+', songURL):
+            songURL += "/d"
 
         # Test for number
         if not match(r'^\d+$', confStyle):
