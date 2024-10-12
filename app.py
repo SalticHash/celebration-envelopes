@@ -44,10 +44,10 @@ def index():
             return error("Invalid url format")
         
         # If using sndup and forgot /d or d add it.
-        if match(r'https?:\/\/sndup.net\/\w+\/', songURL):
-            songURL += ""
-        elif match(r'https?:\/\/sndup.net\/\w+', songURL):
-            songURL += ""
+        if match(r'^https?:\/\/sndup.net\/\w+\/$', songURL):
+            songURL += "d"
+        elif match(r'^https?:\/\/sndup.net\/\w+$', songURL):
+            songURL += "/d"
 
         # Test for number
         if not match(r'^\d+$', confStyle):
@@ -95,6 +95,7 @@ def index():
 def view():
     req_encoded = request.args.get("q")
     req = decode(req_encoded)
+    # Temporal Hardcoded fix, I printed a QR in HI res so i will not re print it 💀
     req["songURL"] = req["songURL"].replace("/dd", "/d")
     return render_template("view.html", req = req)
 
