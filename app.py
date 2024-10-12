@@ -95,6 +95,7 @@ def index():
 def view():
     req_encoded = request.args.get("q")
     req = decode(req_encoded)
+    req["songURL"] = req["songURL"].replace("/dd", "/d")
     return render_template("view.html", req = req)
 
 @app.route("/songs")
