@@ -45,9 +45,9 @@ def index():
         
         # If using sndup and forgot /d or d add it.
         if match(r'https?:\/\/sndup.net\/\w+\/', songURL):
-            songURL += "d"
+            songURL += ""
         elif match(r'https?:\/\/sndup.net\/\w+', songURL):
-            songURL += "/d"
+            songURL += ""
 
         # Test for number
         if not match(r'^\d+$', confStyle):
