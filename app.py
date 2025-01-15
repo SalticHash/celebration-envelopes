@@ -60,8 +60,8 @@ def index():
         if int(confStyle) != 0:
             if not match(r'^\d+$', confType):
                 return error("Confetti type is not a number")
-            # Test if bigger than 6
-            if int(confType) > 6:
+            # Test if bigger than 7
+            if int(confType) > 7:
                 return error("Confetti type unavailable")
         else:
             confType = '0'

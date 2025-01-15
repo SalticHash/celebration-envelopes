@@ -80,7 +80,8 @@ options = [
     "Heart ❤️",
     "Christmas ornament ❄️",
     "Jack-o'-lantern 🎃",
-    "Cowfetti 🐮"
+    "Cowfetti 🐮",
+    "Ant Rain 🌧️"
 ]
 optGroups = ["Regular", "Holiday", "???"]
 
